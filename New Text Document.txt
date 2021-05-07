@@ -1,0 +1,15 @@
+        elif 'wikipedia' in query:
+            speak("searching...")
+            query = query.replace("wikipedia","")
+            query = query.replace("search","")
+            query = query.replace("on","")
+            query = query.replace("about","")
+            query = query.replace("jarvis","")
+            result = wikipedia.summary(query, sentences=2)
+            print(result)
+            speak(result)
+    speak("welcome")
+    speak("What's your name, Human?") 
+    name ='Human'
+    name = takecommand() 
+    speak("Hello, " + name + '.') 
